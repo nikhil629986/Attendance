@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { dashboard } from '../../Models/dashboard';
 import { StudentdetailService } from '../../Service/studentdetail.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import Swal from 'sweetalert';
+import swal from 'sweetalert';
 @Component({
   selector: 'app-mark-attendance',
   templateUrl: './mark-attendance.component.html',
@@ -40,7 +40,7 @@ export class MarkAttendanceComponent {
       student.attendance.push({ date, status });
       this.studentdetailService.updateStudent(student).subscribe(
         (data: any) => {
-          Swal('Success!', 'Attendance Marked Successfully', 'success');
+          swal('Success!', 'Attendance Marked Successfully', 'success');
         },
         (error: any) => {
           console.log(error);

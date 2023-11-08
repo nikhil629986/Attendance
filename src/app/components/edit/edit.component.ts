@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { dashboard } from 'src/app/Models/dashboard';
 import { StudentdetailService } from 'src/app/Service/studentdetail.service';
-import Swal from 'sweetalert';
+import swal from 'sweetalert';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
@@ -42,7 +42,7 @@ export class EditComponent {
       const updatedStudent = this.studentForm.value;
       updatedStudent.id = this.student.id;
       this.studentService.updateStudent(updatedStudent).subscribe(() => {
-        Swal('Success!', 'Student Has been Successfully Updated', 'success');
+        swal('Success!', 'Student Has been Successfully Updated', 'success');
         
       });
     }

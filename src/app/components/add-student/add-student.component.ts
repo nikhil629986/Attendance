@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { StudentdetailService } from 'src/app/Service/studentdetail.service';
-import Swal from 'sweetalert';
+import swal from 'sweetalert';
 import { Router } from '@angular/router';
 
 @Component({
@@ -25,7 +25,7 @@ export class AddStudentComponent implements OnInit {
   onAddStudent() {
     console.log(this.studentForm.value);
     this.studentService.createStudent(this.studentForm.value).subscribe((res) => {
-      Swal('Success!', 'Student data has been saved successfully', 'success');
+      swal('Success!', 'Student data has been saved successfully', 'success');
       this.router.navigate(['/']);
     });
   }
