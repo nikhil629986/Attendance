@@ -1,0 +1,16 @@
+<h1>Mark Attendance Form</h1>
+
+<form  [formGroup]="markattendanceForm" (ngSubmit)="MarkAttendance()" style="margin: 20px; padding: 20px; background-color: #f2f2f2; border: 1px solid #ccc; border-radius: 5px;">
+  <label>Student Id</label>
+  <select name="studentid" formControlName="studentId" style="display: block; padding: 10px; width: 100%; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;">
+    <option value="{{ stu.id }}" *ngFor="let stu of students">{{('00' + stu.id).slice(-3) }}</option> 
+  </select>
+  <label>Enter Date</label>
+  <input type="date" formControlName="date" style="display: block; padding: 10px; width: 100%; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;">
+  <label>Status</label>
+  <select name="Status" formControlName="status" style="display: block; padding: 10px; width: 100%; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;">
+    <option value="Present">Present</option>
+    <option value="Absent">Absent</option>
+  </select>
+  <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Mark Attendance</button> 
+</form>

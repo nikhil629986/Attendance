@@ -1,0 +1,23 @@
+
+
+  <div class="container">
+    <h3>Attendance for {{studentAtten[0].name}}</h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Status</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let attendance of studentAtten[0]?.attendance">
+                <td>{{ attendance.date }}</td>
+                <td>{{ attendance.status }}</td>
+			
+			</tr>
+
+		
+		</tbody>
+	</table>
+</div>

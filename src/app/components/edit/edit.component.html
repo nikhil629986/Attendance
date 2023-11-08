@@ -1,0 +1,22 @@
+<form [formGroup]="studentForm" (ngSubmit)="onUpdateStudent()" class="my-form">
+  <div class="form-group " style="display: none;">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" formControlName="email">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="text" class="form-control" id="phone" formControlName="phone">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>

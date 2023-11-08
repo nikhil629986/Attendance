@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+ 
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.my-table {
+  width: 100%;
+}
+
+.mat-row,
+.mat-header-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mat-cell,
+.mat-header-cell {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
